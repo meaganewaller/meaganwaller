@@ -3,6 +3,15 @@ import "$styles/syntax-highlighting.css"
 import * as Turbo from "@hotwired/turbo"
 import { Application } from "@hotwired/stimulus"
 
+// Example Shoelace components. Mix 'n' match however you like!
+import "@shoelace-style/shoelace/dist/components/button/button.js"
+import "@shoelace-style/shoelace/dist/components/icon/icon.js"
+import "@shoelace-style/shoelace/dist/components/spinner/spinner.js"
+
+// Use the public icons folder:
+import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js"
+setBasePath("/shoelace-assets")
+
 /**
  * Adds support for declarative shadow DOM. Requires your HTML <head> to include:
  * `<meta name="turbo-cache-control" content="no-cache" />`
