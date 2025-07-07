@@ -16,5 +16,9 @@
     "postcss-load-config": "^4.0.1",
     "postcss-preset-env": "^9.1.2",
     "read-cache": "^1.0.0"
+  },
+  "dependencies": {
+    "@hotwired/turbo": "^8.0.13",
+    "turbo-shadow": "^1.2.0"
   }
 }
