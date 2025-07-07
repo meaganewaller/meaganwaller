@@ -1,3 +1,5 @@
+@import "variables.css";
+
 /* Import the base Shoelace stylesheet: */
 @import "@shoelace-style/shoelace/dist/themes/light.css";
 
