@@ -6,6 +6,7 @@ output
 
 # Dependency folders
 node_modules
+vendor
 
 # Caches
 .sass-cache
