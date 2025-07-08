@@ -3,14 +3,19 @@
   <head>
     <%= render "head", metadata: site.metadata, title: data.title %>
   </head>
-  <body class="<%= data.layout %> <%= data.page_class %>">
-    <div id="container">
-      <a href="#main" class="skip">Skip to main content</a>
+  <body>
+    <a href="#main" class="skip">Skip to main content</a>
+
+    <% if data.title != "home" %>
       <%= render "header" %>
-      <main id="main">
-        <%= yield %>
-      </main>
+    <% end %>
+
+    <main id="main">
+      <%= yield %>
+    </main>
+
+    <% if data.title == "home" %>
       <%= render "footer", metadata: site.metadata %>
-    </div>
+    <% end %>
   </body>
 </html>

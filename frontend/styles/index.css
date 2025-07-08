@@ -14,37 +14,158 @@
 
 body {
   background-color: var(--bg-pale-pink);
-  color: #333;
+  color: var(--orchid);
   cursor: url("../../src/images/cursors/default.webp"), auto;
-  font-size: 125%;
-  margin: 0;
-  padding: 2rem;
-  line-height: 1.5;
   font-family: "IBM Plex Mono", monospace;
+  font-size: 125%;
+  line-height: 1.5;
+  margin: 0;
+
+  p {
+    text-align: left;
+  }
+
+  a {
+    color: var(--lavender);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--bg-pale-pink);
+      border-bottom: 1px solid var(--orchid);
+    }
+
+    &:active {
+      color: var(--orchid);
+      border-bottom: 1px dashed var(--orchid);
+    }
+  }
+
+  h1,
+  h2 {
+    color: var(--lavender);
+  }
+
+  a.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:focus {
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      background-color:  #FFDAED;
+      width: auto;
+      height: auto;
+    }
+
+    &:hover {
+      background-color: var(--orchid);
+      color: var(--bg-pale-pink);
+    }
+
+    &:active {
+      background-color: var(--orchid);
+      color: var(--bg-pale-pink);
+    }
+  }
+
+  main#main {
+    padding: 10px 5% 20px 5%;
+    max-width: 1000px;
+    margin: 4rem auto;
+    background-color: var(--baby-pink);
+    border-radius: 25px;
+    outline-color: var(--orchid);
+    outline-style: solid;
+  }
+
+  header#header {
+    position: sticky;
+    padding: .45rem 0;
+    border-color: var(--orchid);
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    background-color: var(--mint-lime);
+    margin-bottom: 1rem;
+
+    ul {
+      list-style-type: none;
+      padding: 0.5em 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+
+      li {
+        font-size: 1.2em;
+
+        a {
+          color: var(--lavender);
+
+          &:hover {
+            color: var(--orchid);
+            border-bottom: 1px solid var(--orchid);
+          }
+
+          &:active {
+            color: var(--orchid);
+            border-bottom: 1px dashed var(--orchid);
+          }
+
+        }
+      }
+    }
+  }
+
+  footer#footer {
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+
+    div {
+      padding: 0.5em 0;
+      border-color: var(--orchid);
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 25px;
+      width: 75%;
+      margin: 0 auto;
+
+      p {
+        font-size: 0.7em;
+        text-align: center;
+
+        a {
+          color: var(--lavender);
+
+          &:hover {
+            color: var(--orchid);
+          }
+
+          &:active {
+            color: var(--orchid);
+          }
+        }
+      }
+    }
+
+  }
 }
 
-p {
-  text-align: left;
-}
+/* body {
 
 ol, ul {
   text-align: left;
   line-height: 1.6em;
   list-style-position: inside;
-}
-
-a {
-  color: var(--lavender);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--orchid);
-  }
-
-  &:active {
-    color: var(--orchid);
-    border-bottom: 1px dashed var(--orchid);
-  }
 }
 
 code, pre {
@@ -151,4 +272,4 @@ main {
       border-bottom: 1px dashed var(--orchid);
     }
   }
-}
+} */
