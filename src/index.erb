@@ -3,16 +3,38 @@ layout: default
 title: home
 ---
 
+<h1>hiii, i'm <a href="/about">meagan</a>.</h1>
+
+<p>
+  This is the home page of my website. For recent blog posts, see the <a href="/blog">blog</a> page.
+</p>
+
+<p>
+  For more information about me, see the <a href="/about">about</a> page.
+</p>
+
+<p>
+  For a list of what I'm up to these days, see the <a href="/now">now</a> page.
+</p>
+
+<p>
+  For an RSS feed of my blog posts, see the <a href="/rss">RSS</a> page.
+</p>
+
+
 <div class="posts">
-  <h2>Posts</h2>
-  <% collections.posts[0..4].each do |post| %>
-    <div class="post-card">
-      <div class="post-date"><%= post.date.strftime("%B %d, %Y") %></div>
-      <h3>
-        <a href="<%= post.relative_url %>">
-          <%= post.data.title %>
-        </a>
-      </h3>
-    </div>
-  <% end %>
+  <h2>latest posts</h2>
+  <ul>
+    <% collections.posts.resources.each do |post| %>
+      <li>
+        <a href="<%= post.relative_url %>"><%= post.data.title %></a>
+        <small> - <%= post.date.strftime("%B %d, %Y") %></small>
+      </li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+  <p>💻 <em>Built with love and a lot of diet soda.</em></p>
+  <p style="color: var(--mint-lime); font-style: italic;">xx, Meagan</p>
 </div>
