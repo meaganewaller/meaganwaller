@@ -1,0 +1,18 @@
+---
+layout: default
+title: home
+---
+
+<div class="posts">
+  <h2>Posts</h2>
+  <% collections.posts[0..4].each do |post| %>
+    <div class="post-card">
+      <div class="post-date"><%= post.date.strftime("%B %d, %Y") %></div>
+      <h3>
+        <a href="<%= post.relative_url %>">
+          <%= post.data.title %>
+        </a>
+      </h3>
+    </div>
+  <% end %>
+</div>

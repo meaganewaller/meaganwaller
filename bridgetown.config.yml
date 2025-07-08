@@ -1,0 +1,11 @@
+url: "https://meaganwaller.com"
+
+permalink: pretty
+template_engine: erb
+
+timezone: "America/New_York"
+collections:
+  posts:
+    permalink: "/blog/:slug/"
+pagination:
+  enabled: true
