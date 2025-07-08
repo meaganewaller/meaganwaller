@@ -21,6 +21,30 @@ body {
   line-height: 1.5;
   margin: 0;
 
+  .content .welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 1rem;
+
+    img {
+      max-width: 140px;
+    }
+  }
+
+  .content {
+    padding: 0 5%;
+
+    p:first-of-type {
+      margin-top: 5rem;
+    }
+
+    p:last-of-type {
+      margin-bottom: 5rem;
+    }
+  }
+
   p {
     text-align: left;
   }
