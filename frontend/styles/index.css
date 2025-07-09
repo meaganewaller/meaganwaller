@@ -37,11 +37,52 @@ body {
     padding: 0 5%;
 
     p:first-of-type {
-      margin-top: 5rem;
+      max-width: 75%;
+      text-align: center;
+      margin: 5rem auto 0 auto;
+    }
+
+    p {
+      text-align: center;
     }
 
     p:last-of-type {
       margin-bottom: 5rem;
+    }
+
+    .posts {
+      h2 {
+        color: var(--mint-lime);
+        text-align: center;
+        border-bottom: 1px solid var(--mint-lime);
+        padding-bottom: .5rem;
+        margin-bottom: 3rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+
+          a {
+            font-size: 90%;
+          }
+
+          small {
+            font-size: 75%;
+            color: var(--orchid);
+            font-weight: bold;
+          }
+
+        }
+      }
+
     }
   }
 

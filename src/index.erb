@@ -25,14 +25,13 @@ title: home
     For an RSS feed of my blog posts, see the <a href="/rss">RSS</a> page.
   </p>
 
-
   <div class="posts">
     <h2>latest posts</h2>
     <ul>
       <% collections.posts.resources.each do |post| %>
         <li>
           <a href="<%= post.relative_url %>"><%= post.data.title %></a>
-          <small> - <%= post.date.strftime("%B %d, %Y") %></small>
+          <small><%= post.date.strftime("%B %d, %Y") %></small>
         </li>
       <% end %>
     </ul>
